@@ -32,7 +32,7 @@
 </svelte:head>
 
 <main>
-	<div class="header">
+	<div class="header" style="background-image: url('yoal-desurmont-jqgsM3B9Fpo-unsplash-1.jpg');">
 		<h1>Las palabras mágicas</h1>
 		<h2>«We be of one blood, ye and I»</h2>
 	</div>
