@@ -45,7 +45,7 @@
     background-attachment: fixed;
     background-origin: initial;
     background-clip: initial;
-    background-color: rgb(66, 101, 32);
+    background-color: #222426;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -65,5 +65,19 @@
     color: #ddd;
     font-family: 'Fira Sans', sans-serif;
     font-weight: 200;
+  }
+  @media (max-width: 768px) {
+    .header {
+      min-height: 50vh;
+      padding: 1rem;
+      background-position-y: -200px;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    main {
+      padding: 1rem;
+      margin: 0 auto;
+    }
   }
 </style>
