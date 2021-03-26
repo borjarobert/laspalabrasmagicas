@@ -28,4 +28,10 @@
     outline: none;
     transition:ease-in-out 300ms;
   }
+  @media (max-width: 768px) {
+    nav {
+      padding: 0 1rem;
+      height: 3rem;
+    }
+  }
 </style>

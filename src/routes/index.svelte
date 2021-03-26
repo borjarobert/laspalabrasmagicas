@@ -32,7 +32,7 @@
 </svelte:head>
 
 <main>
-	<div class="header">
+	<div class="header" style="background-image: url('yoal-desurmont-jqgsM3B9Fpo-unsplash-1.jpg');">
 		<h1>Las palabras mágicas</h1>
 		<h2>«We be of one blood, ye and I»</h2>
 	</div>
@@ -110,10 +110,6 @@
 	.title a {
 		text-decoration: none;
 		color: #eee;
-		padding: 0 8px;
-	}
-	.title a:hover {
-		box-shadow:inset 0 -20px 0 0 rgba(150, 199, 115, 0.05);
 	}
 	.meta {
 		font-family: 'Fira Sans', sans-serif;
@@ -128,6 +124,32 @@
 		line-height: 2rem;
 		font-weight: 300;
 		margin: 1rem 0;
-		padding: 0 8px;
+	}
+	@media (max-width: 768px) {
+		.header {
+			background-position-y: -200px;
+			background-position-x: -200px;
+			min-height: 50vh;
+		}
+		h1, h2 {
+			padding: 0 1rem;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+			text-align: center;
+		}
+		h2 {
+			font-size: 1.5rem;
+			text-align: center;
+			padding-top: 2rem;
+		}
+		.content {
+			padding: 1rem;
+			margin: 0 auto;
+		}
+		.post {
+			padding: 2rem 0;
+		}
 	}
 </style>
