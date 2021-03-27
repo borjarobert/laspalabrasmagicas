@@ -62,6 +62,7 @@
 		grid-column: 1/2;
 		display: block;
 		text-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+		padding: 0 1rem;
 	}
 	h1 {
 		font-family: "Fira Sans", sans-serif;
