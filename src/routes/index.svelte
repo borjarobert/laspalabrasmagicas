@@ -41,7 +41,7 @@
 		{#each posts as post}
 		<div class="post">
 			<div class="title">
-				<a href="{post.slug}">{post.title}</a>
+				<a rel="prefetch" href="{post.slug}">{post.title}</a>
 			</div>
 			<div class="meta">
 				Por Borja, el {parseDate(post.updated_at)}
