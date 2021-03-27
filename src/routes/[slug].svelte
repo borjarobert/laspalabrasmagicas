@@ -19,6 +19,10 @@
     featureImage = post.feature_image;
   }
 </script>
+<svelte:head>
+  <title>{post.title}</title>
+  <link rel="stylesheet" href="posts.css">
+</svelte:head>
 <div class="header" style="background-image: url({featureImage});">
   <div class="header-content">
     <h3>Artículo</h3>
@@ -66,6 +70,7 @@
     font-family: 'Fira Sans', sans-serif;
     font-weight: 200;
   }
+
   @media (max-width: 768px) {
     .header {
       min-height: 50vh;
