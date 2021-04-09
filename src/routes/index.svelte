@@ -1,9 +1,11 @@
 <script context="module">
 	export async function load({page, fetch, session, context }) {
-		const url = "https://blog.vps.brobert.net/ghost/api/v3/content/posts/?key=59fe182cd749ef21320efd7af3";
+		// const url = "https://blog.vps.brobert.net/ghost/api/v3/content/posts/?key=59fe182cd749ef21320efd7af3";
+		const url = "https://cockpit.vps.brobert.net/api/collections/get/Posts/entries"
 		const res = await fetch(url);
 		const allPosts = await res.json();
-		const posts = allPosts.posts;
+		const posts = allPosts.entries;
+	
 
 		return {
 			props: {
@@ -14,15 +16,11 @@
 </script>
 <script>
 	export let posts;
-	console.log(posts);
 	const parseDate = (d) => {
 		const months = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
 		const year = d.split("-")[0];
 		const month = d.split("-")[1];
 		const day = d.split("-")[2].split("T")[0];
-
-		console.log(year, months[month-1], day);
-
 		return `${day} ${months[month-1]}. ${year}`
 	}
 </script>
@@ -44,7 +42,7 @@
 				<a rel="prefetch" href="{post.slug}">{post.title}</a>
 			</div>
 			<div class="meta">
-				Por Borja, el {parseDate(post.updated_at)}
+				<!-- Por Borja, el {parseDate(post.updated_at)} -->
 			</div>
 			<div class="excerpt">
 				{post.excerpt}
@@ -74,7 +72,7 @@
 		font-family: 'Cormorant Garamond', serif;
 		font-style: italic;
 		font-weight: 300;
-		font-size: 2.5rem;
+		font-size: 2.2rem;
 	}
 	.header {
 		min-height: calc(16rem + 14vh);
@@ -93,7 +91,7 @@
 		justify-content: center;
 	}
 	.content {
-		max-width: 1140px;
+		max-width: 900px;
 		margin: 2rem auto;
 		padding: 0 2rem;
 	}
@@ -116,7 +114,6 @@
 		font-family: 'Fira Sans', sans-serif;
 		color: #eee;
 		font-weight: 300;
-		padding: 0 8px;
 	}
 	.excerpt {
 		font-family: 'Cormorant Garamond',serif;
